@@ -36,19 +36,24 @@ body{background:radial-gradient(900px 600px at 20% -10%,#ffffff 0%,#eef4ff 50%,#
 .btn.lt{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 6px 16px rgba(30,70,160,.10)}
 .btn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
 .full{grid-column:1/-1}
-.info{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 18px 8px}
-.row{display:grid;grid-template-columns:92px 1fr;gap:8px;padding:9px 0;border-bottom:1px solid rgba(42,107,255,.08);font-size:15px;line-height:1.5}
+.info{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:6px 18px}
+.row{padding:12px 0;border-bottom:1px solid rgba(42,107,255,.10)}
 .row:last-child{border-bottom:0}
-.row b{font-weight:800}
-.row span{color:#3c4a66}
-.row small{display:block;color:var(--sub);font-size:13px}
+.row b{display:block;font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--blue);margin-bottom:4px}
+.row span{display:block;color:#1b2a48;font-size:clamp(13px,3.75vw,15.5px);font-weight:500;line-height:1.5;letter-spacing:-.015em}
+.row span i{display:block;font-style:normal}
+.row a{color:inherit;text-decoration:none}
+.row small{display:grid;grid-template-columns:1fr 1fr;gap:1px 12px;margin-top:7px;padding-top:7px;border-top:1px dashed rgba(42,107,255,.16);color:var(--sub);font-size:13.5px;line-height:1.55;letter-spacing:-.015em}
+.row small u{grid-column:1/-1;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.08em;color:#7d8bb0}
+.row small em{font-style:normal;white-space:nowrap}
 .cards{display:grid;gap:10px;margin-top:14px}
-.cd{border-radius:14px;padding:14px 16px;color:#fff;background:linear-gradient(150deg,#2a6bff,#1d4fd8)}
+.cd{border-radius:14px;padding:15px 18px 14px;color:#fff;background:linear-gradient(150deg,#2a6bff,#1d4fd8)}
 .cd:nth-child(2){background:linear-gradient(150deg,#16a6ff,#0d7fe0)}
 .cd:nth-child(3){background:linear-gradient(150deg,#6a5cff,#4b3fd8)}
-.cd h3{margin:0 0 6px;font-size:17px;display:flex;justify-content:space-between}
-.cd h3 span{font-size:13px;font-weight:600;padding:2px 9px;border-radius:99px;background:rgba(255,255,255,.22)}
-.cd p{margin:0;font-size:14.5px;line-height:1.6;opacity:.96}
+.cd h3{margin:0 0 8px;font-size:17px;letter-spacing:-.01em}
+.cd ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:3px 12px}
+.cd li{font-size:14px;line-height:1.5;opacity:.97;white-space:nowrap;letter-spacing:-.02em}
+@media (max-width:380px){.cd ul{grid-template-columns:1fr}}
 .foot{margin-top:22px;text-align:center;font-size:12px;letter-spacing:.25em;color:#8a97b2}
 </style>
 </head>
@@ -78,18 +83,18 @@ body{background:radial-gradient(900px 600px at 20% -10%,#ffffff 0%,#eef4ff 50%,#
   <div class="tip"><b>명함 사진 저장</b>은 강사 소개 화면을 사진으로, <b>연락처 저장</b>은 휴대폰 연락처로 저장합니다.</div>
 
   <div class="info">
-    <div class="row"><b>전화</b><span>010-5079-2193</span></div>
-    <div class="row"><b>메일</b><span>jsd2193@hanmail.net</span></div>
-    <div class="row"><b>교수</b><span>전남과학대학교 특수통신전기드론학과(겸임)<br>한국열린사이버대학교 인공지능융합학과(특임)</span></div>
-    <div class="row"><b>안전전문강사</b><span>(사) 전국민안전교육진흥원</span></div>
-    <div class="row"><b>연구위원</b><span>(사) 국방보건연구소<br>(사) 한국군 부사관발전 연구소</span></div>
-    <div class="row"><b>학력</b><span>조선대학교 군사학 박사 · 사회복지학 석사<small>인공지능융합학 · 소방안전관리학 · 국방상담리더십학 · 인터넷경영정보학 · 신학사 전공</small></span></div>
+    <div class="row"><b>전화</b><span><a href="tel:01050792193">010-5079-2193</a></span></div>
+    <div class="row"><b>메일</b><span><a href="mailto:jsd2193@hanmail.net">jsd2193@hanmail.net</a></span></div>
+    <div class="row"><b>교수</b><span><i>전남과학대학교 특수통신전기드론학과(겸임)</i><i>한국열린사이버대학교 인공지능융합학과(특임)</i></span></div>
+    <div class="row"><b>안전전문강사</b><span><i>(사) 전국민안전교육진흥원</i></span></div>
+    <div class="row"><b>연구위원</b><span><i>(사) 국방보건연구소</i><i>(사) 한국군 부사관발전 연구소</i></span></div>
+    <div class="row"><b>학력</b><span><i>조선대학교 군사학 박사</i><i>사회복지학 석사</i><small><u>전공</u><em>인공지능융합학</em><em>소방안전관리학</em><em>국방상담리더십학</em><em>인터넷경영정보학</em><em>신학사</em></small></span></div>
   </div>
 
   <div class="cards">
-    <div class="cd"><h3>AI · IT 자격</h3><p>AI활용 안전관리자 · AI GPT 교육전문가 1급 · 인공지능교육지도사 1급 · AI 채용컨설턴트 2급</p></div>
-    <div class="cd"><h3>안전 · 행정 자격</h3><p>생애주기별 안전전문강사 · 소방안전관리자 · 위험물안전관리자 · 일반행정사</p></div>
-    <div class="cd"><h3>복지 · 상담 자격</h3><p>사회복지사 2급 · 요양보호사 1급 · 심리상담사 2급 · 장애인활동지원사 · 인성교육지도사 2급</p></div>
+    <div class="cd"><h3>AI · IT 자격</h3><ul><li>AI활용 안전관리자</li><li>AI GPT 교육전문가 1급</li><li>인공지능교육지도사 1급</li><li>AI 채용컨설턴트 2급</li></ul></div>
+    <div class="cd"><h3>안전 · 행정 자격</h3><ul><li>생애주기별 안전전문강사</li><li>소방안전관리자</li><li>위험물안전관리자</li><li>일반행정사</li></ul></div>
+    <div class="cd"><h3>복지 · 상담 자격</h3><ul><li>사회복지사 2급</li><li>요양보호사 1급</li><li>심리상담사 2급</li><li>장애인활동지원사</li><li>인성교육지도사 2급</li></ul></div>
   </div>
 
   <div class="foot">SPEAKER PROFILE</div>
